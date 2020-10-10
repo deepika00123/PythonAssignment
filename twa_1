@@ -1,0 +1,53 @@
+a="Hello"+" I m Deepika"
+print(a)
+# it doesn't  work
+#b="its my contact"+123456
+#print(b)
+#its work
+c="its my contact"+"123456"
+print(c)
+
+print("2.Repitation in string:")
+# it multiplies the string
+d="sorry"*100
+print(d)
+
+print("3.Indexing in string:")
+#Always index numbering start from 0 at the left side
+# from the right side its stared from -1
+e="Mathematics"
+print(e[1])
+print(e[-4])
+
+print("4.Slicing in string:")
+#its provide slices which we from where we want to indexing
+f="DeepikaIsHere"
+print(f[:7])
+print(f[7:9])
+print(f[9:])
+
+print("5.Membership in string:")
+# check the string given entity or string present or not
+# it is also a case sensitive
+g="DeepikaIsHere"
+if "deep" in g:
+    print("Exit")
+else:
+    print("Not exit")
+
+print("6.Iteration for string:")
+# for typing all charecter or entities in string
+h=("123456789")
+for charecter in h:
+    print(charecter)
+
+
+
+
+
+
+
+
+
+
+
