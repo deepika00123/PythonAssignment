@@ -1,0 +1,32 @@
+import datetime
+
+
+import pandas as pd
+from plyer import notification
+
+from pandas import DataFrame
+def notifyMe(title,message):
+    notification.notify(
+        title = ("Hey...Deepika ready for your next class"),
+        message = ("Subject name is"),
+        app_icon = ("C:\online class schedule\icon.ico"),
+        timeout = 10
+    )
+
+
+if __name__ == '__main__':
+    df = pd.read_excel("Book 1.xlsx")
+    #print(df)
+    dayname = datetime.datetime.now().strftime("%A")
+    #print(dayname)
+    time = datetime.datetime.now().strftime("%H:%M")
+    #print(time)
+
+
+    for index,item in df.iterrows():
+        sub_time = item['Time'].strftime("%H:%M")
+        day = item['Day'].strftime("%A")
+        #print(sub_time)
+        if(time == sub_time):
+            if(dayname == day):
+                notifyMe(item['Sub'])
